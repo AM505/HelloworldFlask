@@ -1,9 +1,8 @@
 import os
 from flask import Flask
+from hello_world import app
 if os.path.exists("env.py"):
-    import env
-
-app = Flask(__name__)
+    import hello_world.env as env
 
 
 @app.route("/")
