@@ -1,0 +1,32 @@
+html
+{
+    width:100%;
+}
+
+.card
+{
+    width:50%;
+    padding: 10px;
+    border: 1px solid grey;
+}
+
+.card img
+{
+    width: 50%;
+}
+
+.scroll-area{
+    overflow-y: scroll;
+    margin: auto;
+    width: 60%;
+    border: 1px solid red;
+    background-color: aqua;
+}
+
+.text-shaddow{
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.flashes h4{
+    line-height: 2;
+}
