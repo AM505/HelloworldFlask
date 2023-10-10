@@ -12,7 +12,7 @@ if os.path.exists("env.py"):
 @app.route("/index")
 def index():
     recipes = list(Recipe.query.order_by(Recipe.recipe_name).all())
-    return render_template("index.html")
+    return render_template("index.html", recipes=recipes)
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
