@@ -11,6 +11,7 @@ if os.path.exists("env.py"):
 @app.route("/")
 @app.route("/index")
 def index():
+    recipes = list(Recipe.query.order_by(Recipe.recipe_name).all())
     return render_template("index.html")
 
 @app.route("/login", methods=["GET", "POST"])
