@@ -1,5 +1,6 @@
 import os
-from flask import Flask
+from flask import ( render_template, 
+    redirect, request, session, url_for, flash)
 from hello_world import app
 if os.path.exists("env.py"):
     import  env
@@ -8,4 +9,4 @@ if os.path.exists("env.py"):
 @app.route("/")
 @app.route("/index")
 def hello():
-    return "<h1>Hello World!</h1>"
+    return render_template("index.html")
