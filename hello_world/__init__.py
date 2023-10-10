@@ -1,5 +1,6 @@
 import os
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 if os.path.exists("env.py"):
     import  env
 
@@ -13,4 +14,7 @@ else:
     if uri.startswith("postgres://"):
         uri = uri.replace("postgres://", "postgresql://", 1)
     app.config["SQLALCHEMY_DATABASE_URI"] = uri  # heroku
+    
+db = SQLAlchemy(app)
+
 from hello_world import routes
